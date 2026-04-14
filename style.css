@@ -1,8 +1,11 @@
 :root {
-  --primary-color: #002033;
-  --secondary-color: #2c5ed2;
-  --text-color: #002033;
-  --bg-color: #ffffff;
+  --primary-color: #2a7f8f;
+  --hover-color: #236c7a;
+  --text-color: #1f3a44;
+  --secondary-text: #3a5560;
+  --tetriary-text: #6b8792;
+  --primary-bg: #ffffff;
+  --secondary-bg: #e8f1f2;
 }
 *,
 *::before,
@@ -17,14 +20,19 @@ body {
   padding: 0;
 }
 a:hover {
-  color: var(--secondary-color);
+  color: var(--hover-color);
   transition: 0.3s;
 }
+h1,
+h2 {
+  font-family: "Lora", serif;
+  color: var(--primary-color);
+}
 body {
-  background: var(--bg-color);
+  background: var(--primary-bg);
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--secondary-text);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,14 +45,14 @@ header {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
-  background-color: var(--bg-color);
+  background-color: var(--primary-bg);
   padding: 22px 0;
   position: fixed;
   z-index: 1000;
   margin-top: 0;
 }
 .header__container {
-  width: 1280px;
+  width: 1220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,19 +78,19 @@ header {
   font-size: 22px;
   font-weight: 600;
   line-height: 120%;
-  color: var(--secondary-color);
+  color: var(--hover-color);
 }
 .header__logo-subtext {
   font-size: 14px;
 }
 .contacts__btn {
-  border: 2px solid var(--secondary-color);
-  background-color: var(--bg-color);
+  border: 2px solid var(--hover-color);
+  background-color: var(--primary-bg);
   padding: 8px 20px;
   border-radius: 888px;
-  color: var(--secondary-color);
+  color: var(--hover-color);
   font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.2s ease;
   .social-img-2 {
     display: none;
     transition: 0.3s;
@@ -93,11 +101,11 @@ header {
   }
 }
 .contacts__btn:hover {
-  background-color: var(--secondary-color);
-  color: var(--bg-color);
+  background-color: var(--hover-color);
+  color: var(--primary-bg);
   .social-img-2 {
     display: block;
-    transition: 0.3s;
+    transform: translateY(-1px);
   }
   .social-img-1 {
     display: none;
@@ -108,17 +116,17 @@ header {
 #section-science,
 #section-normativ,
 #section-get,
-#section-order {
-  width: 1280px;
+#section-order,
+#section-contacts {
+  width: 1220px;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
   position: relative;
 }
 .promo__subtext-line {
   width: 8px;
   height: 70px;
-  background-color: var(--secondary-color);
+  background-color: var(--hover-color);
 }
 .promo__subtext {
   display: flex;
@@ -126,14 +134,15 @@ header {
   gap: 20px;
   font-size: 20px;
   max-width: 90%;
+  margin-bottom: 20px;
 }
 .promo__headtext {
-  font-size: 32px;
+  font-size: 30px;
   max-width: 90%;
 }
 .promo {
   position: relative;
-  margin-top: 120px !important;
+  margin-top: 130px !important;
 }
 .section__sutitle {
   display: flex;
@@ -162,17 +171,55 @@ header {
 .normativ,
 .science,
 .get,
-.order {
-  padding: 30px 40px;
-  background-color: var(--bg-color);
-  border-radius: 16px;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+.order,
+.contacts__us {
+  padding: 40px 0;
+  background-color: var(--primary-bg);
+  border-radius: 20px;
+  /* box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12); */
 }
-.button-download{
-display: flex;
-gap: 10px;
-align-items: center;
-color: var(--text-color);
-font-size: 20px;
-padding: 20px 0;
+.contacts__us {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--secondary-bg);
+}
+.button-download {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 20px;
+  padding: 20px 0;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #d6e2e6;
+  margin: 40px 0 6px;
+  font-size: 14px;
+}
+.footer-container {
+  width: 1220px;
+  padding: 30px;
+}
+
+.container__btn {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+.text__contacts-us {
+  width: 1100px;
+  font-size: 18px;
+  text-align: center;
+}
+.section__container-text {
+  line-height: 150%;
+  width: 94%;
+  span {
+    font-weight: 600;
+  }
 }
