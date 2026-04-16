@@ -228,6 +228,7 @@ header {
   width: 1140px;
   font-size: 18px;
   text-align: center;
+  justify-content: center;
 }
 .section__container-text {
   line-height: 150%;
